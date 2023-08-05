@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "re4"
+version = "0.1.0"
+description = ""
+authors = ["Txus Bach <me@txus.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.8"
+click = "^8.1.6"
+langchain = "^0.0.249"
+python-dotenv = "^1.0.0"
+chromadb = "^0.4.4"
+lark = "^1.1.7"
+tiktoken = "^0.4.0"
+neo4j = "^5.11.0"
+
+[tool.poetry.scripts]
+re4 = "re4.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

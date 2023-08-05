@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  neo4j:
+    image: neo4j:5.7.0
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./.re4/neo4j/data:/data
+      - ./.re4/neo4j/plugins:/plugins
+    environment:
+      NEO4J_AUTH: 'neo4j/password'

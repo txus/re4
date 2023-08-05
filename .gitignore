@@ -1,0 +1,17 @@
+.env
+data
+__pycache__
+*.swp
+*.csv
+.DS_Store
+*.png
+.ipynb_checkpoints
+.venv
+*.jsonl
+*.amlignore
+*.amltmp
+.ipynb_aml_checkpoints
+mlruns/
+.mypy_cache/
+.re4/
+*.log
