@@ -1,14 +1,17 @@
 # re4: Q&A over documents with knowledge graphs & ontology discovery
 Re4 is a Q&A chatbot agent backed by an ever-growing knowledge graph. It does 4 things:
 
-- Retrieve: Like any Q&A over documents, when it receives a question it retrieves documents from a vector store.
-- Respond: It then responds with this limited context, adding in any prior knowledge it may have in the knowledge graph.
+- Retrieve: Like any Q&A over documents, when it receives a question it retrieves relevant documents from a vector store.
+- Recall: Recall relevant knowledge triples from the knowledge graph that may aid in the response.
+
+(produce a response and then)
+
 - Reflect: It updates entries in the knowledge graph, adding or removing as needed according to what it learned from the interaction.
 
 In agent parlance, this makes it very good at exploitation: primed by user interaction, it'll learn better and better ontologies
 about the set of concepts that it is asked about.
 
-What about exploration? We need intrinsic curiosity, and the easiest proxy is random exploration! Here comes the 4th thing:
+But that's 3 things. What about exploration? We need intrinsic curiosity, and the easiest proxy is random exploration! Here comes the 4th thing:
 
 - Research: On demand or on a schedule, the agent will consult random documents and start reflecting on them, growing the knowledge graph.
 
